@@ -13,63 +13,71 @@
 </head>
 <body>
 
-    <section class="banner" id="bio"> 
-        <img class="w-100 bg d-none d-lg-block" src="img/img-banner-01.jpg" alt="" />
-        <img class="w-100 bg d-block d-lg-none" src="img/img-banner-02.jpg" alt="" />
+    <section class="banner" id="bio">
+        <div class="bg-container">
+            <img class="bg d-none d-lg-block img-fluid" src="img/img-banner-01.jpg" alt="" />
+            <img class="w-100 bg d-block d-lg-none" src="img/img-banner-02.jpg" alt="" />
+        </div> 
         <div class="container text-center h-100">
             <div class="row h-100">
-                <div class="col-sm-5 mx-auto d-flex flex-column justify-content-between"> 
+                <div class="col-sm-7 mx-auto d-flex flex-column justify-content-between"> 
                     <nav class="navbar navbar-expand-sm navbar-dark">
-                        <div class="container-fluid flex-sm-column"> 
-                            <a class="navbar-brand m-0" href="#">
-                                <h1 class="visually-hidden">SAMSARA</h1>
-                                <img src="svg/logo-band.svg" alt="SAMSARA logo" class="logo">
-                            </a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbar">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="#bio">Bio</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#fotos">Fotos</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#videos">Videos</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#fechas">Fechas</a>
-                                    </li> 
-                                </ul>
+                        <div class="container-fluid flex-sm-column">
+                            <div class="row">
+                                <div class="col-12">
+                                    <a class="navbar-brand m-0" href="#">
+                                        <h1 class="visually-hidden">SAMSARA</h1>
+                                        <img src="svg/logo-band.svg" alt="SAMSARA logo" class="logo">
+                                    </a>
+                                </div>
+                                <div class="col-5 mx-auto my-1">
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="collapse navbar-collapse w-100" id="navbar">
+                                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex justify-content-around w-100">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" href="#bio">Bio</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#fotos">Fotos</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#videos">Videos</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#fechas">Fechas</a>
+                                            </li> 
+                                        </ul>
+                                    </div>
+                                </div> 
                             </div>
                         </div>
                     </nav> 
                     <div>
-                        <ul class="w-50 mx-auto list-unstyled list-inline d-flex justify-content-between my-5">
+                        <ul class="rrss w-50 list-unstyled list-inline mb-5 pb-5">
                             <li>
                                 <a href=""> 
-                                    <img src="svg/icon-instagram.svg" alt="Instagram" style="height: 20px;"/>
+                                    <img src="svg/icon-instagram.svg" alt="Instagram"/>
                                 </a>
                             </li>
                             <li>
                                 <a href=""> 
-                                    <img src="svg/icon-facebook.svg" alt="Facebook" style="height: 20px;"/>
+                                    <img src="svg/icon-facebook.svg" alt="Facebook"/>
                                 </a>
                             </li>
                             <li>
                                 <a href=""> 
-                                    <img src="svg/icon-youtube.svg" alt="Youtube" style="height: 20px;"/>
+                                    <img src="svg/icon-youtube.svg" alt="Youtube"/>
                                 </a>
                             </li>
                             <li>
                                 <a href=""> 
-                                    <img src="svg/icon-spotify.svg" alt="Spotify" style="height: 20px;"/>
+                                    <img src="svg/icon-spotify.svg" alt="Spotify"/>
                                 </a>
                             </li>
                         </ul> 
-                        <p class="w-60 mx-auto text-light my-5">
+                        <p class="w-60 mx-auto text-light my-5 py-5">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                             <strong>
                                 Aenean commodo ligula eget dolor. Aenean massa. 
@@ -89,7 +97,7 @@
     <hr>
 
     <section id="fotos" class="mb-5">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12"> 
                     <h2>Fotos</h2>
@@ -128,30 +136,30 @@
     </section>
 
     <section id="videos" class="mb-5">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12"> 
-                    <h2>Videos</h2>
+                    <h2 class="mt-5">Videos</h2>
                 </div>
                 <div class="col-12">
-                    <div class="video-container">
-                        <iframe class="video" width="100%" height="100%" src="https://www.youtube.com/embed/9SHlMrl4PUE?si=NlWOeoHlG0pRWWVy?controls=0&showinfo=0" frameborder="0" scrolling="no" 
+                    <a class="video-container" href="https://www.youtube.com/embed/9SHlMrl4PUE" data-toggle="lightbox">
+                        <!-- <iframe class="video" width="100%" height="100%" src="https://www.youtube.com/embed/9SHlMrl4PUE?si=NlWOeoHlG0pRWWVy?controls=0&showinfo=0" frameborder="0" scrolling="no" 
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;modestbranding"
-                        allowfullscreen></iframe>
-                    </div> 
+                        allowfullscreen></iframe> -->
+                    </a> 
                 </div>
             </div>
         </div>
     </section>
 
     <section id="spotify">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row"> 
                 <div class="col-4"> 
-                    <h2>Samsara en Spotify</h2> 
+                    <h2 class="mt-5 mb-3">Samsara en Spotify</h2> 
                 </div>
                 <div class="col-12">
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6jAYhMzcdtjekkHOS0kach?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe style="border-radius: 0" src="https://open.spotify.com/embed/album/6jAYhMzcdtjekkHOS0kach?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -159,11 +167,13 @@
     
     <hr>
  
-    <section id="fechas" class="footer">
-        <img class="w-100 bg" src="img/img-09.jpg" alt="" />
+    <section id="fechas" class="footer"> 
+        <div class="bg-container"> 
+            <img class="bg" src="img/img-09.jpg" alt="" />
+        </div> 
         <div class="container h-100">
             <div class="row flex-column h-100 justify-content-end align-items-center">
-                <div class="col-lg-6 mx-auto mb-5"> 
+                <div class="col-lg-7 mx-auto mb-5"> 
                     <h2 class="m-0">Próximas Fechas</h2>
                     <table class="table table-dark">
                         <thead>
@@ -204,38 +214,33 @@
                         </strong> 
                     </p>
                 </div>  
-                <div class="col-lg-4 mx-auto mb-5"> 
-                    <form action="" class="d-flex flex-column">
-                        <label class="text-light fw-light mb-2" for="">Recibe las últimas noticias</label>
+                <div class="col-lg-4 mx-auto mb-5 text-center"> 
+                    <form action="" class="form d-flex flex-column">
+                        <label class="label text-light fw-light mb-2" for="">Recibe las últimas noticias</label>
                         <input type="text" />
-                    </form> 
-                </div>  
-                <div class="col-lg-5 mx-auto"> 
-                    <ul class="w-50 mx-auto list-unstyled list-inline d-flex justify-content-between">
+                    </form>   
+                    <ul class="rrss mt-5 list-unstyled list-inline">
                         <li>
                             <a href=""> 
-                                <img src="svg/icon-instagram.svg" alt="Instagram" style="height: 24px;"/>
+                                <img src="svg/icon-instagram.svg" alt="Instagram"/>
                             </a>
                         </li>
                         <li>
                             <a href=""> 
-                                <img src="svg/icon-facebook.svg" alt="Facebook" style="height: 24px;"/>
+                                <img src="svg/icon-facebook.svg" alt="Facebook"/>
                             </a>
                         </li>
                         <li>
                             <a href=""> 
-                                <img src="svg/icon-youtube.svg" alt="Youtube" style="height: 24px;"/>
+                                <img src="svg/icon-youtube.svg" alt="Youtube"/>
                             </a>
                         </li>
                         <li>
                             <a href=""> 
-                                <img src="svg/icon-spotify.svg" alt="Spotify" style="height: 24px;"/>
+                                <img src="svg/icon-spotify.svg" alt="Spotify"/>
                             </a>
                         </li>
-                    </ul> 
-                </div>
-                <div class="w-100"></div>
-                <div class="col-lg-4 mx-auto"> 
+                    </ul>  
                     <img src="svg/logo-band.svg" alt="SAMSARA logo" class="logo mx-auto"> 
                 </div>
                 <hr>
