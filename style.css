@@ -7,7 +7,7 @@ body{
     font-size: 14px;
     line-height: 24px;
     color: white;
-} 
+}  
 
 h2 {
     color: white;
@@ -33,11 +33,16 @@ hr{
     width: 70%;
 }
 
+.navbar-toggler-icon{
+    filter: invert();
+    padding: 0;
+}
+
 /* bio */
  
 .logo{
     margin: 0;
-    max-width: 100px; 
+    max-width: 200px; 
     width: 100%;
 }  
 
@@ -55,44 +60,101 @@ hr{
     padding: 20px; 
 } 
 
+.navbar{
+    height: auto; 
+}
+
+.navbar.active{
+    height: 60px;
+    background: rgba(0,0,0,.75);
+} 
+
+.navbar.active  .container-fluid{
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar.active .offcanvas{
+    align-items: start; 
+}
+
+.navbar.active:after{
+    display: none;
+    transition:  al .3s ease-in-out;
+}
+
 .navbar .nav-link{
     font-size: 12px; 
     font-weight: normal;
+    color: white;
+}
+
+.navbar .nav-link.active{
+    color: white;
 }
 
 .banner{ 
-    position: relative;
     height: 100vh;
-    background: url(img/img-banner-02.jpg) no-repeat center 8% #000000;
-    background-size: 100%;
-    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
 } 
 
-.banner .bg-container{
-    width: 100%;
-    overflow: hidden;
+.banner .container{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.banner .bg-container{ 
+    height: 100vh;
+    min-height: 960px; 
+    background: url(img/img-banner-02.jpg) no-repeat center 8% #000000;
+    background-size: 100%;
     margin: 0 auto;
+    opacity: .6;
+    overflow: hidden;
     text-align: center;
+    width: 100%; 
 }
- 
-.banner .bg-container img{ 
-    opacity: .6; 
+
+.rrss{
+    display: flex;
+    justify-content: center;  
 }
+
+.rrss li { margin: 0 24px }
+
+.rrss img { height: 30px }
 
 .banner .rrss{ 
     margin: 50px auto;  
 }
 
 /* fotos */
- 
-.gallery {
-    display: flex;
-    flex-direction: column;
-} 
+  
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 46px);
+    grid-auto-rows: 142px;
+    grid-auto-flow: dense;
+    gap: 10px;
+}
 
 .gallery-item{
-    margin: 10px;
-}  
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1; 
+    gap: 20px;
+    margin: 0;
+}
+ 
+.gallery-item.r2 { grid-row: span 2 } 
+.gallery-item.c2 { grid-column: span 2 }     
+.gallery-item.c4 { grid-column: span 4 }     
+.gallery-item.c5 { grid-column: span 5 } 
 
 /* video */
 
@@ -161,14 +223,16 @@ hr{
   
 .footer .bg-container{
     display: block;
-    overflow: hidden;
-}
-
-.footer .bg-container .bg{     
-    opacity: 0.7;
-    transform: scale(1.2);
-    margin: 0 0 0 -150%;
+    overflow: hidden;     
+    opacity: 0.75; 
     padding: 90px 0;
+    mix-blend-mode: lighten; 
+    width: 100vw;
+    height: 100vh;
+    min-height: 1000px; 
+    background: url(img/img-09.jpg) no-repeat center 8% #000000;
+    background-attachment: fixed;
+    background-size: cover;
 }  
 
 .footer .table-dark{
@@ -219,28 +283,35 @@ hr{
  
 .footer .rrss{ 
     margin: 50px auto;  
-}
-
-.rrss{
-    display: flex;
-    justify-content: center;  
-}
-
-.rrss li { margin: 0 24px }
-
-.rrss img { height: 30px }
+} 
 
 .footer .logo{ 
     margin: 30px auto 10px;
     width: 320px; 
     min-width: 100%;
+} 
+
+.offcanvas{
+    background-color: #000000!important;
+    width: 70%!important;
 }
 
 @media (min-width: 576px){
 
+
+    .navbar.active .logo{
+        width: 300px;
+        padding: 32px; 
+        margin: 32px 0;
+    }
+
     .logo{
         margin: 60px auto 20px;
         max-width: 500px;
+    }
+    
+    .navbar.active .offcanvas{
+        align-items: end; 
     }
     
     .offcanvas{
@@ -252,6 +323,10 @@ hr{
     
     .navbar{
         height: 200px;
+    }
+
+    .navbar .container-fluid{
+        flex-direction: column; 
     }
 
     .navbar:after{
@@ -268,44 +343,22 @@ hr{
         right: 0; 
     }
 
-    .banner{ 
+    .banner{
         height: auto;
-        background: #000000;
     }
 
-    .banner .container{
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        right: 0;
+    .banner .bg-container{
+        width: 100vw;
+        height: 100%; 
+        background: url(img/img-banner-01.jpg) no-repeat center 8% #000000;
+        background-attachment: fixed;
+        background-size: cover;
+        opacity: .6;
     }
 
     .banner .rrss{ 
         margin: 80px auto; 
-    }
-
-    .gallery{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 46px);
-        grid-auto-rows: 142px;
-        grid-auto-flow: dense;
-        gap: 10px;
-    }
-
-    .gallery-item{
-        overflow: hidden;
-        display: grid;
-        grid-template-columns: 1;
-        grid-template-rows: 1; 
-        gap: 20px;
-        margin: 0;
-    }
-    
-    .gallery-item.r2 { grid-row: span 2 } 
-    .gallery-item.c2 { grid-column: span 2 }     
-    .gallery-item.c4 { grid-column: span 4 }     
-    .gallery-item.c5 { grid-column: span 5 }   
+    } 
 
     .video-container img{ 
         border-top: 40px solid black;
