@@ -30,7 +30,7 @@ hr{
     height: 20px;
     margin: 3em auto;
     opacity: 1;
-    width: 300px;
+    width: 70%;
 }
 
 /* bio */
@@ -343,6 +343,10 @@ hr{
     .footer hr{
         width: 320px; 
         margin: 0 auto 3em;
+    }
+
+    hr { 
+        width: 300px; 
     }
 
 }
